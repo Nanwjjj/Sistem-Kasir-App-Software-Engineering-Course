@@ -1,0 +1,55 @@
+Function Main
+    Output "TOKO ELEKTRONIK XYZ"
+    Output "Yogyakarta, Jl. Brawijaya 01"
+    Declare Integer loop
+    
+    Loop
+        Declare Integer B01, B02, JB01, JB02, Total, Harga, Harga01, Harga02, TotalHarga, Disct, Bayar, TotalBayar
+        Declare String Barang
+        
+        Output "Masukkan Nama Barang 01: "
+        Input Barang
+        Output "Masukkan Jumlah Barang: "
+        Input JB01
+        Output "Masukkan Nama Barang 02: "
+        Input Barang
+        Output "Masukkan Jumlah Barang: "
+        Input JB02
+        Output "Masukkan Harga Barang 01: "
+        Input B01
+        Output "Masukkan Harga Barang 02: "
+        Input B02
+        Assign Harga01 = B01 * JB01
+        Assign Harga02 = B02 * JB02
+        Assign TotalHarga = Harga01 + Harga02
+        If TotalHarga >= 10000000
+            Output "Jumlah Barang Yang Dibeli"
+            Output "Barang 01: "&JB01
+            Output "Harga/Barang Rp."&B01
+            Output "Barang 02: "&JB02
+            Output "Harga/Barang Rp."&B02
+            Assign Total = JB01 + JB02
+            Output "Total jumlah barang yang dibeli adalah: "&Total
+            Output "Jumlah harga keseluruhan adalah: "&TotalHarga
+            Assign Disct = TotalHarga * 20 / 100
+            Assign Bayar = TotalHarga - Disct
+            Output "Diskon: " &20&"%"
+            Output "Jadi total keseluruhan harga yang harus dibayar adalah: "&Bayar
+        Else
+            Output "Jumlah Barang Yang Dibeli"
+            Output "Barang 01: "&JB01
+            Output "Harga/Barang Rp."&B01
+            Output "Barang 02: "&JB02
+            Output "Harga/Barang Rp."&B02
+            Assign Total = JB01 + JB02
+            Output "Total jumlah barang yang dibeli adalah: "&Total
+            Output "Jumlah harga keseluruhan adalah: "&TotalHarga
+            Assign Bayar = TotalHarga
+            Output "Jadi total keseluruhan yang harus dibayar adalah: "&Bayar
+        End
+        Output "Apakah anda ingin menghitung kembali?"
+        Output "1. Ya"
+        Output "2. Tidak"
+        Input loop
+    Do loop = 1
+End
